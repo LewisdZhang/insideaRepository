@@ -6,17 +6,21 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>用户列表</title>
+		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" /> 
+		<script type="text/javascript" src="../static/js/jquery-3.3.1.js" ></script>  
+		<script type="text/javascript" src="../static/js/bootstrap.js" ></script>
+		<script type="text/javascript" src="../static/js/echarts.js" ></script>
 	</head>
 	<body style="margin: 0 auto; width: 800px;"> 
 		<form action="${pageContext.request.contextPath}/user/findByCriteria.action" method="post">
-			<table width="100%" border=1>
+			<table class="table table-bordered">
 				<caption>查询条件</caption>
 				<tr>
 					<td><input type="submit" value="查询"/></td>
 				</tr>
 			</table>
 		</form>
-		<table style="width: 88%;" border=1>
+		<table class="table table-bordered table-striped">
 			<caption>用户列表</caption>
 			<tr>
 				<td>用户编号</td>
@@ -42,5 +46,7 @@
 				</tr>
 			</c:forEach>
 		</table>
+		<div id="container" style="height: 400px;margin:auto"></div>
+		<script type="text/javascript" src="../static/js/todo.js" ></script>
 	</body>
 </html>
