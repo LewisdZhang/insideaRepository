@@ -23,6 +23,8 @@
 		<property name="password" value="${jdbc.password}" />
 		<property name="maxActive" value="10" />
 		<property name="maxIdle" value="5" />
+		 <property name="removeAbandoned" value="true"></property>
+  		<property name="removeAbandonedTimeout" value="3600"></property>
 	</bean>
 	
 	<!-- mapper配置 -->
