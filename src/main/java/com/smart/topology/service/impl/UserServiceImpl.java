@@ -17,17 +17,15 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserMapper userMapper;
 
-	@Override
+
 	public List<User> findAllUser() {
 		return userMapper.selectByExample(null);
 	}
 
-	@Override
 	public User findById(Integer id) {
 		return userMapper.selectByPrimaryKey(id);
 	}
 
-	@Override
 	public void update(User user) {
 		if (userMapper.updateByPrimaryKeySelective(user) != 1) {
 			throw new IncorrectUpdateSemanticsDataAccessException("更新异常");
