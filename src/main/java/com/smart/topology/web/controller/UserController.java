@@ -26,8 +26,6 @@ public class UserController {
 	public String list(Model model) throws Exception {
 		List<User> users = userService.findAllUser();
 		model.addAttribute("users", users);
-		 logger.info("status:{}", users);
-		 LogHelper.logger.info("common helper log");
 		return "list";
 	}
 
