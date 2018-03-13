@@ -6,6 +6,8 @@ public class User {
     private Integer id;
 
     private String username;
+    
+    private String password;
 
     private Date birthday;
 
@@ -52,4 +54,18 @@ public class User {
     public void setAddress(String address) {
         this.address = address == null ? null : address.trim();
     }
+
+	/**
+	 * @return the password
+	 */
+	public String getPassword() {
+		return password;
+	}
+
+	/**
+	 * @param password the password to set
+	 */
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }

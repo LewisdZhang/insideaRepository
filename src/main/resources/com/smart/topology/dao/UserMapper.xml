@@ -8,6 +8,8 @@
     <result column="sex" property="sex" jdbcType="CHAR" />
     <result column="address" property="address" jdbcType="VARCHAR" />
   </resultMap>
+   <!-- 增删改查标签里的id:一定要和接口里对应的方法名一致， resultMap输出类型里写映射标签里的id ，
+   			parameterType：输入类型，规范输入数据类型，指明查询时使用的参数类型-->
   <sql id="Example_Where_Clause" >
     <where >
       <foreach collection="oredCriteria" item="criteria" separator="or" >
