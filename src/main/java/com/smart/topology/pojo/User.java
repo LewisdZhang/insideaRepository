@@ -3,7 +3,7 @@ package com.smart.topology.pojo;
 import java.util.Date;
 
 public class User {
-    private Integer id;
+    private Integer userId;
 
     private String username;
     
@@ -16,11 +16,11 @@ public class User {
     private String address;
 
     public Integer getId() {
-        return id;
+        return userId;
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        this.userId = id;
     }
 
     public String getUsername() {

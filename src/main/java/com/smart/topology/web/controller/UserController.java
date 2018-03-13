@@ -2,6 +2,8 @@ package com.smart.topology.web.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,10 +12,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.smart.topology.pojo.User;
 import com.smart.topology.service.UserService;
+import com.smart.topology.utils.LogHelper;
 
 @Controller
 @RequestMapping("/user")
 public class UserController {
+	 private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 	// 注入用户Service
 	@Autowired
 	private UserService userService;
@@ -22,6 +26,8 @@ public class UserController {
 	public String list(Model model) throws Exception {
 		List<User> users = userService.findAllUser();
 		model.addAttribute("users", users);
+		 logger.info("status:{}", users);
+		 LogHelper.logger.info("common helper log");
 		return "list";
 	}
 
